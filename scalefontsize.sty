@@ -1,13 +1,13 @@
-%%% Package   : scalefontsize -- Scale the font size by a factor
-%%% Copyright : 2025 (c) Oliver Beery <beeryoliver@gmail.com>
-%%% CTAN      : <ADD CTAN LINK HERE>
-%%% Repository: https://github.com/beeryoliver/scalefontsize
-%%% License   : The LaTeX Project Public License 1.3c
+% Package   : scalefontsize -- Scale the font size by a factor
+% Copyright : 2025 (c) Oliver Beery <beeryoliver@gmail.com>
+% CTAN      : <ADD CTAN LINK HERE>
+% Repository: https://github.com/beeryoliver/scalefontsize
+% License   : The LaTeX Project Public License 1.3c
 
-%%> \section{Loading the package}
+% Loading the package
 
 \NeedsTeXFormat{LaTeX2e}[2023-11-01]
-\ProvidesExplPackage{scalefontsize}{2025-12-18}{0.0.0}
+\ProvidesExplPackage{scalefontsize}{2025-12-27}{0.0.0}
   {Scale the font size by a factor.}
 
 \msg_new:nnn { scalefontsize } { l3kernel }
@@ -19,11 +19,11 @@
 \IfExplAtLeastTF { 2023-11-01 } { }
   { \msg_critical:nn { scalefontsize } { l3kernel } }
 
-%%> \section{Variable}
+% Variable
 
 \fp_new:N \l__scalefontsize_tmp_fp
 
-%%> \section{Document command}
+% Document command
 
 \NewDocumentCommand \scalefontsize { m }
   {
@@ -53,11 +53,11 @@
       { \msg_error:nnn { scalefontsize } { font-size-invalid } {#1} }
   }
 
-%%> \section{Purifying text}
+% Purifying text
 
 \text_declare_purify_equivalent:Nn \scalefontsize { \use_none:n }
 
-%%> \section{Messages}
+% Messages
 
 \msg_new:nnn { scalefontsize } { math-mode-invalid }
   {
