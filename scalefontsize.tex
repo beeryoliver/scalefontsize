@@ -10,7 +10,7 @@ Scale the font size by a factor
 
 Oliver Beery
 
-Version 0.0.0\quad 27 December 2025
+Version 0.0.0\quad 13 February 2026
 
 
 \section{Introduction}
@@ -32,20 +32,19 @@ define a single command, which scales the font size by a factor.
 
 \section{Command}
 
-The syntax \meta{fp expr} has the same meaning as the argument to \cs{fpeval},
+The syntax \meta{number} has the same meaning as the argument to \cs{fpeval},
 which is documented in \pkg{usrguide}.
 
-\begin{function}{\scalefontsize}
+\begin{code}{\scalefontsize}
   \begin{syntax}
-    \cs{scalefontsize} \marg{fp expr}
+    \cs{scalefontsize} \marg{number}
   \end{syntax}
-  Scales the font size and font baselineskip by a factor equal to the result
-  of evaluating the \meta{fp expr}.
+  Scales the font size and font baselineskip by factor \meta{number}.
   The new font baselineskip has no stretch and shrink components.
   Cannot be used in math mode.
   This command is a more robust alternative to \cs{scalefont} from the
   \pkg{scalefnt} package.
-\end{function}
+\end{code}
 
 
 \section{Programming}
